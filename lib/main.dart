@@ -1,22 +1,21 @@
+import 'package:brasileirao14/boas_vindas_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-      home: Scaffold(
-        body: Stack(children: [
-            Image.network(
-                "https://drive.google.com/uc?export=view&id=11ShDGY5AU60WrOOFwUnLoejKPio-URHb",
-                  fit: BoxFit.fitWidth,
-                  height: 250.0,
-            ),
-            Center(
-              child: Container(
-                height: 250.0,
-                width:300.0,
-                color: Colors.black,
-                
-              ),
-            )
-        ]),
-      )));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        title: 'Autenticação',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const BoasVindasPage());
+  }
 }
